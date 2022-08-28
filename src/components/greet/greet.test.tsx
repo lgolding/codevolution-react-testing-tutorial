@@ -3,14 +3,15 @@ import React from "react";
 import { text } from "stream/consumers";
 import { Greet } from "./greet";
 
-test("Greet renders correctly", () => {
-  render(<Greet />);
-  const textElement = screen.getByText(/hello/i);
-  expect(textElement).toBeInTheDocument();
-});
-
-test("Greet renders with a name", () => {
-  render(<Greet name="Larry" />);
-  const textElement = screen.getByText(/hello, larry/i);
-  expect(textElement).toBeInTheDocument();
+describe("Greet", () => {
+  it("renders correctly", () => {
+    render(<Greet />);
+    const textElement = screen.getByText(/hello/i);
+    expect(textElement).toBeInTheDocument();
+  });
+  it("renders with a name", () => {
+    render(<Greet name="Larry" />);
+    const textElement = screen.getByText(/hello, larry/i);
+    expect(textElement).toBeInTheDocument();
+  });
 });
