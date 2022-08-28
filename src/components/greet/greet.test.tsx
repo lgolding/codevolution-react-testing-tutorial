@@ -1,6 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import React from "react";
-import { text } from "stream/consumers";
 import { Greet } from "./greet";
 
 describe("Greet", () => {
