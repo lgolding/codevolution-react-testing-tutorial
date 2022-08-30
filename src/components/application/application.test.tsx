@@ -36,6 +36,11 @@ describe("Application", () => {
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
 
+    const termsElementByWrapperLabel = screen.getByLabelText(
+      "I agree to the terms and conditions."
+    );
+    expect(termsElementByWrapperLabel).toBeInTheDocument();
+
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();
   });
