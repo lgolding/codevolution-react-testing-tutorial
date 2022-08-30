@@ -10,7 +10,7 @@ export const Application: FC<ApplicationProps> = ({}) => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input type="text" id="name" placeholder="Full name" />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>
