@@ -25,6 +25,11 @@ describe("Application", () => {
     const nameElementByLabel = screen.getByLabelText("Name");
     expect(nameElementByLabel).toBeInTheDocument();
 
+    const nameElementByLabel2 = screen.getByLabelText("Name", {
+      selector: "input",
+    });
+    expect(nameElementByLabel2).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",
     });
