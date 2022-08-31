@@ -11,7 +11,13 @@ export const Application: FC<ApplicationProps> = ({}) => {
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" placeholder="Full name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Full name"
+            value="Larry"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>

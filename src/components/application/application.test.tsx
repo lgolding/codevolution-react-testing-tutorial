@@ -33,6 +33,9 @@ describe("Application", () => {
     });
     expect(nameElementByLabel2).toBeInTheDocument();
 
+    const nameElementByDisplayValue = screen.getByDisplayValue("Larry");
+    expect(nameElementByDisplayValue).toBeInTheDocument();
+
     const nameElementByPlaceholderText =
       screen.getByPlaceholderText("Full name");
     expect(nameElementByPlaceholderText).toBeInTheDocument();
