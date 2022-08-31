@@ -11,6 +11,7 @@ export const Application: FC<ApplicationProps> = ({}) => {
       <img
         src="https://via.placeholder.com/150"
         alt="a person with a laptop"
+        title="a person with a cell phone"
       ></img>
       <form>
         <div>

@@ -23,6 +23,9 @@ describe("Application", () => {
     const imageElement = screen.getByAltText("a person with a laptop");
     expect(imageElement).toBeInTheDocument();
 
+    const imageElementByTitle = screen.getByTitle("a person with a cell phone");
+    expect(imageElementByTitle).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
     });
