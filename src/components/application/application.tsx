@@ -13,6 +13,7 @@ export const Application: FC<ApplicationProps> = ({}) => {
         alt="a person with a laptop"
         title="a person with a cell phone"
       ></img>
+      <div data-testid="custom-element">Custom HTML element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>
