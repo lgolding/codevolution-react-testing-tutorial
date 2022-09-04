@@ -20,6 +20,20 @@ describe("Application", () => {
     const paragraphElement = screen.getByText("All fields are mandatory.");
     expect(paragraphElement).toBeInTheDocument();
 
+    const paragraphElementOptions = screen.getByText("mandatory", {
+      exact: false,
+    });
+    expect(paragraphElementOptions).toBeInTheDocument();
+
+    const paragraphElementRegex = screen.getByText(/mandatory/);
+    expect(paragraphElementRegex).toBeInTheDocument();
+
+    const paragraphElementFunction = screen.getByText(
+      (content: string): boolean => {
+        return content.includes("mandatory");
+      }
+    );
+
     const closeSpanElement = screen.getByTitle("Close");
     expect(closeSpanElement).toBeInTheDocument();
 
