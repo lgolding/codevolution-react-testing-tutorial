@@ -2,7 +2,7 @@ import React, { FC, Fragment } from "react";
 
 export type ApplicationProps = {};
 
-export const Application: FC<ApplicationProps> = ({}) => {
+export const Application: FC<ApplicationProps> = () => {
   return (
     <Fragment>
       <h1>Job application form</h1>
