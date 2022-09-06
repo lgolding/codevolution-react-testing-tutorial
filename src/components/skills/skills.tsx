@@ -7,7 +7,7 @@ export const Skills: FC<SkillsProps> = ({ skills }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoggedIn(true);
-    }, 500);
+    }, 1001);
   }, []);
 
   return (

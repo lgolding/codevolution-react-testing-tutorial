@@ -34,9 +34,13 @@ describe("Skills", () => {
 
   it("displays the Start learning button after a delay", async () => {
     render(<Skills skills={skills} />);
-    const startLearningButton = await screen.findByRole("button", {
-      name: "Start learning",
-    });
+    const startLearningButton = await screen.findByRole(
+      "button",
+      {
+        name: "Start learning",
+      },
+      { timeout: 1100 }
+    );
     expect(startLearningButton).toBeInTheDocument();
   });
 });
