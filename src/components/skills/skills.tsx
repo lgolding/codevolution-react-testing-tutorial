@@ -1,8 +1,14 @@
-import { FC, Fragment, useState } from "react";
+import { FC, Fragment, useEffect, useState } from "react";
 import { SkillsProps } from "./skills.type";
 
 export const Skills: FC<SkillsProps> = ({ skills }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoggedIn(true);
+    }, 500);
+  }, []);
 
   return (
     <Fragment>
