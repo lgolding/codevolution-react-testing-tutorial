@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { getByRole, render, screen } from "@testing-library/react";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
@@ -14,5 +14,21 @@ describe("Skills", () => {
     render(<Skills skills={skills} />);
     const listItemElements = screen.getAllByRole("listitem");
     expect(listItemElements).toHaveLength(skills.length);
+  });
+
+  it("renders Log in button", () => {
+    render(<Skills skills={skills} />);
+    const loginButton = screen.getByRole("button", {
+      name: "Log in",
+    });
+    expect(loginButton).toBeInTheDocument();
+  });
+
+  it("does not render the Start learning", () => {
+    render(<Skills skills={skills} />);
+    const startLearningButton = screen.queryByRole("button", {
+      name: "Start learning",
+    });
+    expect(startLearningButton).toBeNull();
   });
 });
