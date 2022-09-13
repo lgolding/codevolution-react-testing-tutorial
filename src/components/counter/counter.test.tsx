@@ -41,4 +41,18 @@ describe("Counter", () => {
     const countElement = screen.getByRole("heading");
     expect(countElement).toHaveTextContent("2");
   });
+
+  it("renders the count in the 'amount' field after clicking the Set button", async () => {
+    user.setup();
+    render(<Counter />);
+    const amountInput = screen.getByRole("spinbutton");
+    await user.type(amountInput, "42");
+    expect(amountInput).toHaveValue(42);
+    const setButton = screen.getByRole("button", {
+      name: "Set",
+    });
+    await user.click(setButton);
+    const countElement = screen.getByRole("heading");
+    expect(countElement).toHaveTextContent("42");
+  });
 });
