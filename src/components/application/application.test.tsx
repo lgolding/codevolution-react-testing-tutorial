@@ -82,7 +82,9 @@ describe("Application", () => {
     );
     expect(termsElementByWrapperLabel).toBeInTheDocument();
 
-    const submitButtonElement = screen.getByRole("button");
+    const submitButtonElement = screen.getByRole("button", {
+      name: "Submit",
+    });
     expect(submitButtonElement).toBeInTheDocument();
   });
 });

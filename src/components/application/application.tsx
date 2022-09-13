@@ -1,4 +1,5 @@
 import React, { FC, Fragment } from "react";
+import Counter from "../counter/counter";
 
 export type ApplicationProps = {};
 
@@ -49,6 +50,7 @@ export const Application: FC<ApplicationProps> = () => {
         </div>
         <button>Submit</button>
       </form>
+      <Counter />
     </Fragment>
   );
 };
