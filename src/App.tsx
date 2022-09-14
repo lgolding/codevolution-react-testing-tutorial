@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Application } from "./components/application/application";
-import MuiMode from "./mui/mui-mode";
+import MuiMode from "./components/mui/mui-mode";
 import AppProviders from "./providers/app-providers";
 
 function App() {
