@@ -34,7 +34,7 @@ describe("Skills", () => {
 
   it("displays the Start learning button after a delay", async () => {
     const view = render(<Skills skills={skills} />);
-    logRoles(view.container);
+    //logRoles(view.container);
     //screen.debug();
     const startLearningButton = await screen.findByRole(
       "button",
